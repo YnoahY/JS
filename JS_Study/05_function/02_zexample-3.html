@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            //블록과 함수 블록을 이용해 이름 충돌 문제 해결_즉시호출 함수 이용
+            
+            /*다른곳에서 가져온 코드*/
+            let pi = 3.14
+            console.log(`파이 값은 ${pi}입니다.`)
+        </script>
+
+        <script>
+            /*내가 만든 코드*/
+            (function() { //즉시 호출 함수 사용-> 변수 이름 충돌 해결
+                let pi = 3.14
+                console.log(`파이 값은 ${pi}입니다.`)
+            })
+        </script>
+    </head>
+</html>

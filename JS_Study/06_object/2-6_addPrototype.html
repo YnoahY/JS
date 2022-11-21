@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            //contain() 메소드 추가
+            String.prototype.contain = function(data) { //
+                return this.indexOf(data) >= 0
+            }
+
+            Array.prototype.contain = function(data) {
+                return this.indexOf(data) >= 0
+
+
+
+            //String 객체의 contain() 메소드 사용
+            const a = '안녕하세요'
+            console.log('안녕 in 안녕하세요: ', a.contain(`안녕`))
+            console.log('없음 in 안녕하세요: ', a.contain(`없음`))
+
+            }
+            //Array 객체의 contain() 메소드 사용
+            const b = [273, 32, 103, 57, 52]
+            console.log('273 in [273, 32, 103, 57, 52]: ', b.contain(273))
+            //b.contain() -> b가 contain을 호출, ()안의 값을 data에 대입하여 계산 후 출력
+            console.log('0 in [273, 32, 103, 57, 52]: ', b.contain(0))
+        </script>
+    </head>
+</html>

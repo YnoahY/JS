@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            // &&(논리곱): 하나라도 거짓이면 거짓
+            // ||(논리합): 하나라도 참이면 참
+            /*isLeapYear: 지정된 연도가 윤년인지를 나타내는 표시를 반환*/
+            function isLeapYear(year) {
+                return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+            } /* a: year를 4로 나눈 나머지 값이 0과 같을 때 ->true 
+                 b: year를 100으로 나눈 나머지 값이 0과 같지 않을 때 -> true
+                 c: year를 400으로 나눈 나머지 값이 0과 같을 때 -> true
+                 
+                 => a와 b는 둘 다 T->T, 하나라도 F면 F
+                    a+b의 값과 c값 비교시 하나라도 T면 T*/ 
+
+            console.log(`2020년은 윤년일까? ===${isLeapYear(2020)}`) //(T,T)->T ,F -> T
+            console.log(`2010년은 윤년일까? ===${isLeapYear(2010)}`) //(F,T)->F ,F -> F
+            console.log(`2000년은 윤년일까? ===${isLeapYear(2000)}`) //(T,F)->F ,T -> T
+            console.log(`1990년은 윤년일까? ===${isLeapYear(1990)}`) //(T,F)->F ,F -> F
+        </script>
+    </head>
+</html>

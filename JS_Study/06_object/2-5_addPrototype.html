@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+            //프로토타입으로 메소드 추가
+            /*indexOf() 메소드: 내부 자료 확인
+                -> 값 있을 시: 해당 문자열이 시작하는 위치index 출력,
+                -> 값 없을 시 : -1 출력*/
+
+            const j = '안녕하세요' ///객체x, 스택영역에 저장
+            j.indexOf('안녕') //문자열이 시작하는 index의 값 반환
+            j.indexOf('하세')
+            j.indexOf('없는 문자열')
+
+            console.log(j.indexOf('안녕'))
+            console.log(j.indexOf('하세'))
+            console.log(j.indexOf('없는 문자열'))
+            /*
+            값이
+            0  = 같다
+            1  = 있다
+            -1 = 없다*/
+        </script>
+    </head>
+</html>

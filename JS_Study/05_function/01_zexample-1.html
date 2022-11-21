@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            /*윤년 확인 함수
+             * 조건: 4와 400으로 나누어 떨어지는 해 - 윤년, 100으로 나누어 떨어지는 해-윤년x */
+            const input = prompt('year: ','년도 입력')
+            const year = Number(input)
+
+            function isLeapYear(year) {
+                return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 ===0)
+            }
+
+            alert(`${year}년은 ${isLeapYear(year)}`)
+
+            console.log(`2020년은 윤년일까? === ${isLeapYear(2020)}`) //(TT->)T + F -> T
+            console.log(`2010년은 윤년일까? === ${isLeapYear(2010)}`) //(FT->)F + F -> F
+            console.log(`2000년은 윤년일까? === ${isLeapYear(2000)}`) //(TF->)F + T -> T
+            console.log(`1900년은 윤년일까? === ${isLeapYear(1900)}`) //(TF->)F + F -> F
+        </script>
+    </head>
+</html>

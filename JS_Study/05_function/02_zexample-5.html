@@ -1,0 +1,23 @@
+<html>
+    <head>
+       <script>
+        //익명함수: 순차적 코드 실행에서 코드가 해당 줄을 읽을 때 생성
+
+        //변수 선언
+        let anonymous
+
+        //익명함수 2회 생성
+        anonymous = function() {
+            console.log('1번 함수')
+        }
+        anonymous = function () {
+            console.log('2번 함수')
+        }
+
+        //익명 함수 호출
+        anonymous() // 2번 함수가 초기화 되면서 1번함수를 덮어 2번함수만 출력
+       </script>
+    </head>
+    <body></body>
+</html>
+

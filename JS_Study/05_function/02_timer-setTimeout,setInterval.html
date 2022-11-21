@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            //타이머함수: 특정 시간마다 또는 특정 시간 이후에 콜백 함수를 호출
+            /* setTimeout(함수,시간): 특정시간 후 1번 호출
+             * setInverval(함수,시간): 특정시간마다 호출 */
+
+            setTimeout(() => {
+                console.log(`1초 후에 실행 됩니다.`)
+            }, 1*1000)
+
+            let count = 0
+            setInterval(() => {
+                console.log(`1초마다 실행됩니다(${count}번째)`)
+                count++
+            }, 1*1000) //웹브라우저 종료로 강제종료
+        </script>
+    </head>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            /*화살표 함수: function 키워드 대신 화살표(=>)사용, 람다식
+             * (매개변수) => {}불 표현식 || 불 표현식이 거짓일 때 실행할 문장
+             * (매개변수) => 리턴값*/
+            let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+            //체이닝 메소드: 배열 메소드를 연속적으로 사용
+            //조건 만족시 아래로 내려감, 조건 불만족시 현재 로직 종료 후 다음 로직 진행
+            numbers
+            .filter((value) => value%2 ===0) //false -> let numbers로 되돌아간 후 다음 진행
+            .map((value) => value*value) //조건 만족시 forEach로 반환
+            .forEach((value) => {
+                console.log(value)
+            });
+            /* filter매개변수로 numbers값 받음 => 익명함수로 호출하면서 값 전달
+                                      ->값이 false면 let numbers로 되돌아감
+                                      -> filter에서 true면 map으로 이동 후 로직 진행->forEach메소드 호출하면서 값 출력
+                */
+        </script>
+    </head>
+</html>

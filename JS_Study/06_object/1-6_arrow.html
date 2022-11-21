@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            /*function(){}  =  ()=>{}, this키워드 사용 다름*/
+            const test = {
+                a:function() {
+                    console.log(this)
+                },
+
+                b:()=>{
+                    console.log(this)
+                }
+            }
+
+            test.a()
+            test.b()
+        </script>
+    </head>
+</html>

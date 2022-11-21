@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            //최소값 구하기
+
+            function min(array) { //정의부: 호출시에만 실행
+                //min(): consol.log~min을 호출->testArray의 주소값을 가져옴
+                let output = array[0] //testArray의 주소에서 index:0의 공간값을 output에 대입
+                for (const item of array) { //testArray의 주소값 받음->index값 1씩 증가         
+                    //of는 배열에서만 쓸 수 있음, 초기문, 조건, 증감이 들어있는 문장
+                    if (output>item) {
+                        output = item
+                    }
+                }
+                return output
+            }
+
+            const testArray = [52, 273, 32, 103, 275, 24, 57]
+            console.log(`${testArray} 중에서`)
+            console.log(`최솟값 = ${min(testArray)}`)
+        </script>
+    </head>
+</html>

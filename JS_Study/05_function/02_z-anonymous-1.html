@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            //익명함수 사용: 순차적 실행에서 코드가 해당 줄 읽을때 생성
+           let anonymous
+
+           anonymous = function() {
+            console.log(`1번째 익명 함수 입니다.`)
+           }
+
+           anonymous = function() {
+            console.log(`2번째 익명 함수 입니다.`)
+           }
+           
+           anonymous()
+        </script>
+    </head>
+</html>

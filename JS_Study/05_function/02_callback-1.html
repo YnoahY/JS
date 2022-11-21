@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            //콜백 함수: 매개변수로 전달하는 함수
+
+            //함수 선언
+            function callThreeTimes (callback) {
+                for (let i=0; i<3; i++) {
+                    callback(i) //callback이라는 매개변수는 함수->호출 가능
+                }
+            }
+            function print(i) {
+                console.log(`${i}번째 함수 호출`)
+            }
+            callThreeTimes(print) //print메소드가 callback, 메소드도 자료형으로 취급
+        </script>
+    </head>
+</html>

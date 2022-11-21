@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function printLang(code) {
+                return printLang._lang[code] //[code]: 배열
+            }
+            /* 배열 객체 접근: key
+             * 배열 객체 생성: {}
+             * 배열 자료 연결: ,  */
+            printLang._lang = { //배열
+                ko: '한국어',
+                en: '영어',
+                ja: '일본어',
+                fr: '프랑스어',
+                es: '스페인어'
+            }
+            console.log('printLang("ko"): ', printLang('ko'))
+            /* printLang을 호출, ()의 값 전달 
+                -> printLang._lang[code]의 결과 값을 호출한 곳으로 되돌려줌 */
+            console.log('printLang("en"): ', printLang('en'))
+        </script>
+    </head>
+</html>

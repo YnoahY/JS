@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            /* JSON.parse() 메소드: JSON 문자열 자바스크립트 객체로 전개 */
+
+            //자료 생성
+             const data = [{
+                name: 'javascript',
+                price: 18000,
+                publisher: '한빛미디어'
+            } , {
+                name: 'hmtl',
+                price: 26000,
+                publisher: '한빛아카뎀;'
+            }]
+            
+            //자료 JSON으로 변환
+            const json = JSON.stringify(data)
+            console.log(json)
+
+            //JSON문자열 -> 자바스크립트 객체로 변환
+            console.log(JSON.parse(json))
+        </script>
+    </head>
+</html>

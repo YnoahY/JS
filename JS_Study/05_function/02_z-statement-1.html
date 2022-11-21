@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            //선언적 함수: 순차저거 실행이 일어나기 전에 생성
+
+            //선언적 함수 호출
+            statement() //->선언적 함수를 생성하는 코드 앞에 입력
+
+            //선언저거 함수 2번 생성
+            function statement() { 
+                console.log(`1번째 선언적 함수입니다.`)
+            }
+
+            function statement() {
+                console.log(`2번째 선언적 함수입니다.`)
+            }
+        </script>
+    </head>
+</html>

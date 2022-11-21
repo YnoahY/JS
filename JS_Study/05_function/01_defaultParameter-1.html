@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+            /* 기본 매개변수: 반복입력 되는 매개변수에 기본값 저장
+                           : 오른쪽 매개변수에 사용 
+             * 함수명(매개변수, 매개변수=기본값, 매개변수=기본값)
+             */
+            function earnings (name, wage=9050, hours=40) { //함수의 역할: 이름, 시급, 시간을 출력, 시급과 시간을 곱한 최종 급여 출력
+                 /*  => 기본값 설정 후 값 지정해서 대입하지 않으면 기본 입력값이 출력
+
+                  * wage와 hours를 입력하지 않고 실행 -> wage에 최저 임금 적용, 
+                  hours에 법정근로시간 1주일 40시간이 기본 매개변수로 입력 */
+
+                console.log(`#${name}님의 급여 정보`)
+                console.log(`-시급: ${wage}원`)
+                console.log(`근무 시간: ${hours}시간`)
+                console.log(`급여: ${wage*hours}원`)
+                console.log('')
+            }
+            // 최저 임금으로 최대한 근무
+            earnings('구름')
+            //시급 1원으로 최대한 근무
+            earnings('별',10000)
+            //시급 1만원으로 52시간 근무
+            earnings('인성',10000,52)
+        </script>
+    </head>
+</html>

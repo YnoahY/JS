@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            //strict mode(엄격모드)에서 선언 없이 변수 사용 ->error
+            'use strict'
+            data = 10
+            consol.log(data)
+        </script>
+
+        <script>
+            //strict mode(엄격모드)의 일반적인 사용 패턴
+            (function () {
+                'use strict'
+                문장
+                문장
+            })()
+        </script>
+    </head>
+</html>

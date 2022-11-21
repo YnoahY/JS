@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+             /*가변적 매개변수: 가변적으로 늘어나는 값 받음
+             * 공간적 구역성 때문에 연속적으로 받을 수 있음
+             * 배열로 보일 뿐 배열은 아님*/
+             //function 함수명(...나머지 매개변수) { }
+
+            function min(...items) {
+                let output = items[0] //index:0 의 공간 값 받음
+                for (const item of items) { //of: 배열 안의 값 전달
+                    //const: of, in이 들어가는건 const사용 가능매번 알아서 초기화 됨
+
+                    if (output>item) {
+                        output = item
+                    }
+                }
+                return output
+            }
+            console.log(`min(52,273,32,103,275,24,57)`)
+            console.log(`=${min(52,273,32,103,275,24,57)}`) //배열x, 연속적인 값
+           
+        </script>
+    </head>
+</html>

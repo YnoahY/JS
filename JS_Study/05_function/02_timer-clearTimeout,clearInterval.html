@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            //타이머함수
+            /* clearTimeout(타이머id): setTimeout()함수로 설정한 타이머 제거
+             * clearInterval(타이머id): setInterval()함수로 설정한 타이머 제거*/
+            let id
+            let count = 0 //초기화
+            id = setInterval(() => { //id=setInterval()의 주소값 받음
+                console.log(`1초마다 실행됩니다(${count}번째)`)
+                count++
+            }, 1*1000)
+
+            setTimeout(() => { // setTimeout호출, {}안 구문 실행
+                console.log('타이머를 종료합니다.')
+                clearInterval(id)//실행 후 종료
+            }, 5*1000) //종료 시간: 5초
+        </script>
+    </head>
+</html>
