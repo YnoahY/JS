@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script>
+            //배열 확장 후 뒷부분에 요소 추가
+            const fruitsA = ['사과', '배', '바나나']
+            fruitsA[10] = '귤' //공간 확장을 10까지 늘린 후
+            console.log(fruitsA) //index 10에 '귤'을 넣음
+
+            //배열 뒷부분에 요소 추가
+            const fruitsB = ['사과', '배', '바나나']
+            fruitsB[fruitsB.length] = '귤' // length = 3, index:3에 '귤' 넣음
+            console.log(fruitsB)
+        </script>
+    </head>
+</html>

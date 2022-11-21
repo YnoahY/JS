@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            //prompt = 문자열 수용
+            const input = prompt('정수를 입력하세요','') //prompt('박스위 내용','입력칸 내 내용')
+            const last = input[input.length-1] //입력값의 길이-1 -> 배열 index위치에 해당하는 값을 반환
+            /*ex) 123입력 -> 123문자열의 길이=3(index: 0.1.2/[1][2][3]) 
+            -> .length-1로 입력값의 끝자리 index의 값 확인 -> last에 값 대입*/
+
+            //끝자리 비교
+            if (last === "0"|| // === : 동등비교 연산자
+                last === "2"|| // ||: 논리적or
+                last === "4"|| 
+                last === "6"||
+                last === "8") {
+                alert(`${input}은 짝수입니다.`)
+            } else {
+                alert(`${input}은 홀수입니다.`)
+            }
+        </script>
+    </head>
+</html>

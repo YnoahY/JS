@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            //break: 가까운 반복문 종료
+            
+            for (let i = 0; true; i++) { //무한 참
+                alert(i + '번째 반복문 입니다.') // ->아래행으로 내려가기
+
+                //진행 여부 문의
+                const isContinue = confirm('계속 하시겠습니까?') // ->확인=true =>true값이 isContinue에 대입
+                if(!isContinue) { /*  받은 isContinue의 값이 true(확인)->!true => false됨 
+                                                            => if구문으로 못 진입하고 for구문으로 올라감 */
+                                    /*받은 isContinue의 값이 false(취소)->!false => true됨
+                                                            =>if구문 내로 진입->break(종료)*/
+                    break //가장 가까운 반복문 종료(여기서는 for)
+                }
+            }
+        </script>
+    </head>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            //값으로 배열 요소 제거
+            const itemsB = ['사과', '배', '바나나']
+            const index = itemsB.indexOf('바나나') //indexOf로 '바나나'의 index위치 찾은 후 index에 주소값 저장
+            console.log(index) // 찾은 index의 위치 값: 2
+
+            itemsB.splice(index, 1) //index의 위치값(2)에서 부터 1개의 요소 삭제
+            //.splice(index, 2)일 경우-> index의 위치값(2)에서 부터 2개의 요소 삭제
+            
+            console.log(itemsB) //배열에서 '바나나'를 제거 한 값 출력
+            console.log(itemsB.indexOf('바나나')) //indexOf로 '바나나' 위치 찾음-> 못찾거나, 0보다 작은 값이므로 -1 반환
+            //-1: 0보다 작거나 없을때 반환
+        </script>
+    </head>
+</html>
