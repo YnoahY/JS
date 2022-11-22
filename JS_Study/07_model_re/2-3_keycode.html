@@ -1,0 +1,41 @@
+<html>
+    <head>
+       <script>
+        document.addEventListener('DOMContentLoaded',() => {
+
+            const star = document.querySelector('h1')
+            star.style.position = 'absolute'
+
+            let[x,y] = [0,0]
+            const block = 20
+            const print = () => {
+                star.style.left = `${x*block}px`
+                star.style.top = `${y*block}px`
+            }
+            print() //초회(위의 print함수)만 출력
+
+            const [left, up, right,down] = [37, 38, 39, 40]
+            /*A*/document.body.addEventListener('keydown',(event) => { //keybord 누를 때 적용, 누를때마다 실행
+                switch (event.keyCode) {
+                    case left:
+                        x-=1
+                        break
+                    case up:
+                        y-=1
+                        break
+                    case right:
+                        x+=1
+                        break
+                    case down:
+                        y+=1
+                        break
+                }
+                print() //위의 const print부분을 호출해 A를 실행 하고 종료 후 출력
+            }) //A구문 종료
+        })
+       </script>
+    </head>
+    <body>
+        <h1>★</h1>
+    </body>
+</html>

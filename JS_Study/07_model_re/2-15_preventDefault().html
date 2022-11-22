@@ -1,0 +1,20 @@
+<html>
+    <head>
+       <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imgs = document.querySelectorAll('img')
+
+            imgs.forEach((img) => {
+                img.addEventListener('contextmenu', (event) => {
+                    event.preventDefault()
+                })
+            })
+        })
+       </script>
+    </head>
+    <body>
+        <img src="https://cdn.pixabay.com/photo/2022/06/27/10/58/mount-kilimanjaro-7287226_960_720.jpg" alt="킬리만자로의 사진 입니다">
+        <img src="https://cdn.pixabay.com/photo/2022/07/06/12/58/woman-7305088_960_720.jpg" alt="소녀가 꽃을 꺾는 사진입니다.">
+        <img src="https://cdn.pixabay.com/photo/2022/07/04/08/36/city-7300691_960_720.jpg" alt="오스트리아 건물의 사진입니다.">
+        </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+       <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            let nowValue
+            let changeValue = 10
+
+            const select = document.querySelector('select')
+            const input = document.querySelector('input')
+            const span = document.querySelector('span')
+
+            const calculate = () => {
+                span.textContent = (nowValue*changeValue).toFixed(2)
+            }
+
+            select.addEventListener('change',(event) => {
+                const options = event.currentTarget.options
+                const index = event.currentTarget.options.selectedIndex
+                changeValue = Number(options[index].value)
+
+                input.addEventListener('keyup',(event) => {
+                    nowValue = Number(event.currentTarget.value)
+                    calculate()
+                })
+            })
+        })
+       </script>
+    </head>
+    <body>
+        <input type="text">cm =
+        <span></span>
+        <select>
+            <option value="10">mm</option>
+            <option value="0.01">m</option>
+            <option value="0.393701">inch</option>
+        </select>
+    </body>
+</html>

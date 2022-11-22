@@ -1,0 +1,29 @@
+<html>
+    <head>
+       <script>
+        document.addEventListener('DOMContentLoaded',() => {
+            const input = document.querySelector('input') //body에 input type=text
+            const button = document.querySelector('button')
+            const p = document.querySelector('p')
+
+            button.addEventListener('click',() =>{ //button에 이벤트 추가, 클릭시 익명함수 진행
+                const cm = Number(input.value)
+
+                if(isNaN(cm)) { //숫자가 아니면 {}안 출력
+                    p.textContent='숫자를 입력하세요'
+                    return
+                }
+
+                const inch = cm/2.54
+                p.textContent = `${inch}inch`
+            })
+        })
+       </script>
+    </head>
+    <body>
+        <input type="text">cm<br>
+        <button>계산</button>
+        <p></p>
+    </body>
+</html>
+

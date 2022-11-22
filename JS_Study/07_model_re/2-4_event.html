@@ -1,0 +1,17 @@
+<html>
+    <head>
+       <script>
+        const listener = (event) => {
+            const length = textarea.value.length
+            h1.textContent = `글자 수: ${length}`
+        }
+        document.addEventListener('DOMcontentLoaded',() => {
+            const textarea = document.querySelector('textarea')
+            const h1 = documnet.querySelector('h1')
+            textarea.addEventListener('keyup',listener)
+        })
+       </script>
+    </head>
+    <body></body>
+</html>
+

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>DOMContentLoaded Event</title>
+        <script>
+        //문서 객체 가져오기
+        /* DOMContentLoaded 이벤트: 웹 브라우저가 문서 객체를 모두 읽고 나서 실행하는 이벤트
+                                    : DOMContentLoaded 상태가 되었을 때 콜백(=익명) 함수 호출 후 진행*/
+        document.addEventListener('DOMContentLoaded',() => {
+            const h1 = (text) => `<h1>${text}</h1>`
+            document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생') //문서 객체 모두 읽어 들이면 (DOMContentLoaded)이 콜백 함수 실행)
+        })
+        </script>
+    </head>
+    <body></body>
+</html>

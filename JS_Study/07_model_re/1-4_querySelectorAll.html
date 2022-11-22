@@ -1,0 +1,26 @@
+<html>
+    <head>
+       <script>
+        //문서 객체 가져오기
+        /* document.querySelctorAll() 메소드: 문서 객체 여러 개를 배열로 읽어들이는 함수*/
+        
+        //요소 읽어들임
+        document.addEventListener('DOMContentLoaded', () => { //익명(=콜백)함수
+            const header = document.querySelectorAll('h1') //document에서  h1 전부 찾음
+
+            header.forEach((header)=> {
+                header.textContent = 'HEADER'
+                header.style.color = 'white'
+                header.style.backgroundColor = 'black'
+                header.style.padding = '10px'
+            })  
+        })
+       </script>
+    </head>
+    <body> <!-- index처리, 각 개체: 물리적 주소 다름 -->
+        <h1></h1> <!-- index: 0 -->
+        <h1></h1><!-- index: 1 -->
+        <h1></h1><!-- index: 2 -->
+        <h1></h1><!-- index: 3 -->
+    </body>
+</html>

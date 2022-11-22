@@ -1,0 +1,29 @@
+<html>
+    <head>
+       <script>
+        //스타일 조작하기_그라데이션 출력
+        /* 스타일 조작: backgroundColor, textAlign, fontSize
+                     : ex)h1.sytle.backgroundColor ->자주 사용
+                          h1.style['backgroundColor']
+                          h1.style['background-color']*/
+        document.addEventListener('DOMContentLoaded', () => { //람다식->윈도우 형채로 나옴
+            const divs = document.querySelectorAll('body>div')//body의 자식인 div태그  document내에서 전체 찾기
+
+            divs.forEach((div, index) => { //index 개수 만큼 반복(index 0~24까지 반복)
+                console.log(div, index) //출력
+                const val = index * 10 //index 값(0~24) * 10
+                div.style.height = '10px' //크기 지정시 단위 필수
+                div.style.backgroundColor = `rgba(${val}, ${val}, ${val})`
+            })
+        })
+       </script>
+    </head>
+    <body>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+        <div></div><div></div><div></div><div></div><div></div>
+    </body>
+</html>
+

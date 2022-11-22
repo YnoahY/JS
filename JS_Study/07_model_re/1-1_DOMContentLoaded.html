@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOMContentLoaded</title>
+    <script>
+    //DOMContentLoaded 이벤트ㄴ
+
+    //콜백 함수 선언:html쉽제 제작 가능
+    const h1 = (text) => `<h1>${text}</h1>`</script>
+
+    <script>document.body.innerHTML += h1('1번째 script 태그')</script>
+                /*body 태그 생성되기 전에 script 태그로 body 태그를 조작
+                        ->물리적으로 실행은 되었으나 웹페이지에 표시되지 않음*/
+</head>
+<body>
+    <script>document.body.innerHTML += h1('2번째 script 태그')</script>
+    <h1>1번째 h1태그</h1>
+    <script>document.body.innerHTML += h1('3번째 script 태그')</script>
+    <h1>2번째 h1태그</h1>
+</body>
+</html>
