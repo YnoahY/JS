@@ -1,0 +1,24 @@
+<html>
+    <head>
+       <script>
+        /* document.addEventListener('DOMContentLoaded',() => {
+            const h1 = document.querySelector('h1')
+            h1.textContent = '안녕하세요' 
+                
+                =>querySelector()메소드로 추출 된 문서 객체가 없음*/
+
+            //기본 예외 처리
+            document.addEventListener('DOMContentLoaded',() => {
+            const h1 = document.querySelector('h1')
+            if(h1) { //h1이 있으면 true, 없으면 false
+                h1.textContent = '안녕하세요'
+            } else {
+                console.log('h1 태그를 추출할 수 없습니다.')
+            }
+        }) //h1이 없으므로 else 출력
+       </script>
+    </head>
+    <body>
+
+    </body>
+</html>

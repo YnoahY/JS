@@ -1,0 +1,19 @@
+<html>
+    <head>
+       <script>
+        function text() {
+            try {
+                alert('A위치 입니다.')
+                throw "예외강제발생"
+            } catch (exception) {
+                alert('B위치 입니다.')
+                return
+            } finally {
+                alert('C위치입니다.')
+            }
+        }
+        text()
+       </script>
+    </head>
+    <body></body>
+</html>
