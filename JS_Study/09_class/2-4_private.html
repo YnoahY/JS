@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            //정사각형 클래스
+            class Square {
+                constructor(length) {
+                    this.length = length
+                }
+                getPerimeter() { return 4*this.length}
+                getArea() { return this.length*this.length}
+            }
+
+            //활용부
+            const square = new Square(-10)
+            console.log(`정사각형의 둘레: ${square.getPerimeter()}`)
+            console.log(`정사각형의 넓이: ${square.getArea()}`)
+        </script>
+    </head>
+    <body></body>
+</html>

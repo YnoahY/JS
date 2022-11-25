@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script>
+        class Rectangle {
+            constructor (width, height) {
+                this.width = width
+                this.height = height
+            }
+            
+            //사각형 둘레_메소드
+            getPerimeter () {
+                return 2 * (this.width + this.height)
+            }
+
+            //사각형 넓이_메소드
+            getArea () {
+                return this.width * this.height
+            }
+        }
+
+        const rectangle = new Rectangle(10, 20)
+        console.log(`사각형의 둘레: ${rectangle.getPerimeter()}`)
+        console.log(`사각형의 둘레: ${rectangle.getArea()}`)
+
+
+
+        class Square {
+            constructor (length) {
+                this.length = length
+            }
+
+            getPerimeters() {
+                return 4 * this.length
+            }
+            getAreas() {
+                return this.length * this.length
+            }
+        }
+        const square = new Square(10)
+        console.log(`정사각형의 둘레: ${square.getPerimeters()}`)
+        console.log(`정사각형의 넓이: ${square.getAreas()}`)
+        </script>
+    </head>
+    <body></body>
+</html>

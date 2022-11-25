@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <script>
+        //객체 선언
+        const students = [] //배열 객체 선언
+        students.push({이름:'구름', 국어:87, 영어:98, 수학:88, 과학:90}) //각 항목당 index부여
+        students.push({이름:'별이', 국어:92, 영어:98, 수학:96, 과학:88}) 
+        students.push({이름:'겨울', 국어:76, 영어:96, 수학:94, 과학:86})
+        students.push({이름:'바다', 국어:98, 영어:52, 수학:98, 과학:91})
+
+        //객체처리 함수 선언
+        function getSumOf(student) {
+            return student.국어 + student.영어 + student.수학 + student.과학 //호출한 곳으로 return
+        }
+
+        //객체처리 함수 선언
+        function getAverageOf(student) {
+            return getSumOf(student) / 4
+        }   
+
+        //출력
+        let output = '이름\t총점\t평균\n'
+        for (const s of students) {
+            output += `${s.이름}\t${getSumOf(s)}점\t${getAverageOf(s)}점\n`
+        }
+        console.log(output)
+       </script>
+    </head>
+    <body></body>
+</html>
