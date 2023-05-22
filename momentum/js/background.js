@@ -1,9 +1,6 @@
 const images = [
-	"cai-fang.jpg",
-	"eva-darron.jpg",
 	"hunter-reilly.jpg",
 	"marek-piwnicki.jpg",
-	"mario-esposito.jpg",
 	"saira.jpg",
 	"vincenzo-godono.jpg",
 	"wolfgang-hasselmann.jpg",
@@ -16,7 +13,7 @@ const choosenImage = images[Math.floor(Math.random() * images.length)];
 const bgImage = document.createElement("img");
 
 bgImage.src = `img/${choosenImage}`;
-
+bgImage.classList.add("bgImage");
 document.body.appendChild(bgImage);
 
 
